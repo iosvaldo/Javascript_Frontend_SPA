@@ -55,9 +55,9 @@ window.addEventListener("popstate", router);
 
 document.addEventListener("DOMContentLoaded", async () => {
     document.body.addEventListener("click", async e => {
-        //Cancel Button
+        
         if (e.target.matches("[data-button-click]")) {
-            //clear content
+            
             $("#txtTitle").val("");
             $("#txtImageUrl").val("");
             $("#txtMessage").hide();
@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         if (e.target.matches("[data-link-like]")) {
-            //1. Call API  - get Data - GET  2. increse Likes by 1 .3 update Likes using API - PUT
-            //4. Updated HTML 
-            // Making sure to get latest Data
+            
+             
+            
             let apiURL = APIPath + e.target.id;
             console.log(apiURL);
             let response = await fetch(apiURL);
@@ -90,15 +90,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                 },
                 body: JSON.stringify(data)
             });
-            // Awaiting response.json()
+            
             const resData = await responseUpdated.json();
-            //4. Updated HTML             
+                        
             document.querySelector("#like_" + e.target.id).innerHTML = resData.likes;
         }
     });
 
     document.body.addEventListener('change', async function (e) {
-        //search data by Text enter in to Textbox of Search from UI
+        
 
         if (e.target.matches("[data-search]")) {
 
@@ -150,15 +150,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.body.addEventListener('submit', async function (e) {
 
-        // Validation and can add required css. 
-        // Modal popup 
-        // Spinner 
-        // Search - Functionality -
-        // Header and Footer  -- done       
+         
+         
+        
+        
+             
 
 
         if ($("#txtTitle").val() != "" && $("#txtImageUrl").val() != "") {
-            // Insert/ Submit any data : POST Method        
+                    
             e.preventDefault();
 
             let data = {
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             $("#txtTitle").val("");
             $("#txtImageUrl").val("");
-            $("#txtMessage").show(); // similar to display : block 
+            $("#txtMessage").show(); 
             $("#myModal").show();
         }
 
