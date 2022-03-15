@@ -1,9 +1,7 @@
 import Dashboard from "/views/Dashboard.js";
 import Toys from "/views/Toys.js";
 import AddToStore from "/views/AddToStore.js";
-import {
-    APIPath
-} from "/views/Config.js";
+import {APIPath} from "/views/Config.js";
 
 console.log("js is running");
 
