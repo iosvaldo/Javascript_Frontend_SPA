@@ -69,8 +69,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (e.target.matches("[data-link-Close]")) {
             CloseModal();
         }
+        
 
         if (e.target.matches("[data-link-like]")) {
+          
+        
             
              
             
